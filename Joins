@@ -15,4 +15,14 @@ ON EmployeeDemographics.EmployeeID=EmployeeSalary.EmployeeID;
 SELECT D.EmployeeID, D.FirstName, D.LastName, S.JobTitle, S.Salary
 FROM EmployeeDemographics as D
 INNER JOIN EmployeeSalary as S
-ON D.EmployeeID = S.EmployeeID;
+ON D.EmployeeID = S.EmployeeID
+WHERE D.FirstName <> 'Michael'
+ORDER BY S.Salary DESC;
+
+
+SELECT JobTitle, AVG(Salary)
+FROM EmployeeDemographics as D
+INNER JOIN EmployeeSalary as S
+ON D.EmployeeID = S.EmployeeID
+WHERE JobTitle = 'Salesman'
+GROUP BY JobTitle;
