@@ -1,0 +1,16 @@
+/*
+  GROUP BY, ORDER BY
+*/
+SELECT * 
+FROM EmployeeDemographics;
+
+SELECT Gender, Age, COUNT(Gender)
+FROM EmployeeDemographics
+WHERE Age > 31
+GROUP BY Gender, Age;
+
+SELECT Gender, Age, COUNT(Gender)
+FROM EmployeeDemographics
+WHERE Age > 31
+GROUP BY Gender, Age
+ORDER BY Age DESC Gender DESC;
