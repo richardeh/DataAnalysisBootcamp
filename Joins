@@ -1,0 +1,18 @@
+/*
+Inner Joins, Full/Left/Right Outer Joins
+*/
+
+SELECT *
+FROM EmployeeDemographics
+INNER JOIN EmployeeSalary 
+ON EmployeeDemographics.EmployeeID=EmployeeSalary.EmployeeID;
+
+SELECT *
+FROM EmployeeDemographics
+LEFT OUTER JOIN EmployeeSalary 
+ON EmployeeDemographics.EmployeeID=EmployeeSalary.EmployeeID;
+
+SELECT D.EmployeeID, D.FirstName, D.LastName, S.JobTitle, S.Salary
+FROM EmployeeDemographics as D
+INNER JOIN EmployeeSalary as S
+ON D.EmployeeID = S.EmployeeID;
